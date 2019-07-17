@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon --legacy-watch node index.js -a localhost -p 3000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.11",
+    "nodemailer": "^6.2.1",
+    "nodemon": "^1.18.10"
+  }
+}
