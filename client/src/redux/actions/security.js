@@ -9,7 +9,7 @@ export const login = (username, password, dispatch) => {
  const data = {username, password};
  let myHeaders = new Headers();
  myHeaders.append("Content-type", "application/json");
-     fetch ('http://localhost:3001/login_check',
+     fetch ('https://teachonline.herokuapp.com/login_check',
      {
          method:'POST',
          mode: "cors",
@@ -47,7 +47,7 @@ export const register = (user_name, password, email, category, skills, descripti
  let myHeaders = new Headers();
  myHeaders.append("Content-type", "application/json");
  myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));
-     fetch ('http://localhost:3001/user',
+     fetch ('https://teachonline.herokuapp.com/user',
      {
          method:'POST',
          mode: "cors",

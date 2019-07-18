@@ -6,7 +6,7 @@ export const skill = (user_name, skills, dispatch) => {
     let myHeaders = new Headers();
     myHeaders.append("Content-type", "application/json");
     myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));
-        fetch ('http://localhost:3001/skills',
+        fetch ('https://teachonline.herokuapp.com/skills',
         {
             method:'GET',
             mode: "cors",

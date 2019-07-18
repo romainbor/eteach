@@ -44,7 +44,7 @@ class WorkSection extends React.Component {
     const { name, email, message } = this.state;
     let myHeaders = new Headers();
     myHeaders.append("Content-type", "application/json");
-    fetch('http://localhost:3001/mail/send', {
+    fetch('https://teachonline.herokuapp.com/mail/send', {
       method: 'POST',
       mode: "cors",
       headers: myHeaders,

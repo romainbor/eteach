@@ -5,7 +5,7 @@ export default class AnnonceForm extends React.Component{
     skill = [];
     constructor() {
         super();
-        const URL='http://localhost:3001/skills?username=';
+        const URL='https://teachonline.herokuapp.com/skills?username=';
         let skill = new Array();
         // ...
         let myHeaders = new Headers();

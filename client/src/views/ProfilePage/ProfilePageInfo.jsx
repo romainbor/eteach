@@ -50,7 +50,7 @@ class ProfilePageInfo extends React.Component {
 getData() {
   
 
-  const URL=`http://localhost:3001/user/test`;
+  const URL=`https://teachonline.herokuapp.com/user/test`;
   let skill = new Array();
   // ...
   let myHeaders = new Headers();

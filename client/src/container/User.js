@@ -38,7 +38,7 @@ class ListProfil extends React.Component{
       }
     getData() {
          
-        const URL='http://localhost:3001/user';
+        const URL='https://teachonline.herokuapp.com/user';
         let myHeaders = new Headers();
         myHeaders.append("Content-type", "application/json");
         myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));

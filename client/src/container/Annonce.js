@@ -36,7 +36,7 @@ class ListAnnonce extends React.Component{
       }
     getData() {
          
-        const URL='http://localhost:3001/annonce';
+        const URL='https://teachonline.herokuapp.com/annonce';
         let myHeaders = new Headers();
         myHeaders.append("Content-type", "application/json");
         myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));

@@ -73,7 +73,7 @@ class CommentBox extends Component {
         let myHeaders = new Headers();
         myHeaders.append("Content-type", "application/json");
         myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));
-        fetch('http://localhost:3001/comment/create', {
+        fetch('https://teachonline.herokuapp.com/comment/create', {
           method: 'POST',
           mode: "cors",
           headers: myHeaders,
@@ -99,7 +99,7 @@ class CommentBox extends Component {
     loadCommentsFromServer = () => {
     // fetch returns a promise. If you are not familiar with promises, see
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-    const URL='http://localhost:3001/comment/';
+    const URL='https://teachonline.herokuapp.com/comment/';
     let myHeaders = new Headers();
         myHeaders.append("Content-type", "application/json");
         myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));
