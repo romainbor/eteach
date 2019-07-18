@@ -7,10 +7,13 @@ const securityRouter = require('./routes/security');
 const commentRouter = require('./routes/comment');
 const mailRouter = require('./routes/mail')
 
+
+
+const app = express();
+
 const path = require('path')
 app.use(express.static(path.join(__dirname, 'client/build')))
 
-const app = express();
 const cors = require('cors');
 
 // app.use(session({
