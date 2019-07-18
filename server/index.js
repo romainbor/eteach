@@ -7,6 +7,9 @@ const securityRouter = require('./routes/security');
 const commentRouter = require('./routes/comment');
 const mailRouter = require('./routes/mail')
 
+const path = require('path')
+app.use(express.static(path.join(__dirname, 'client/build')))
+
 const app = express();
 const cors = require('cors');
 
@@ -25,6 +28,10 @@ app.use('/annonce', AnnonceRouter);
 app.use('/user', userRouter);
 app.use('/comment', commentRouter);
 app.use('/mail', mailRouter);
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'))
+  })
 
 
 app.listen(3001, () => console.log("node e-teach listening on port 3001"));
