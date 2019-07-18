@@ -21,6 +21,7 @@ import ProfilePage from "views/ProfilePage/ProfilePage.jsx";
 import ProfilePageInfo from "views/ProfilePage/ProfilePageInfo.jsx";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import RegisterPage from "views/RegisterPage/RegisterPage.jsx";
+import * as serviceWorker from './serviceWorker';
 
 var hist = createBrowserHistory();
 const store = createStore(rootReducer);
@@ -50,5 +51,7 @@ ReactDOM.render(
       </BrowserRouter>
       
   </Provider>,
-  document.getElementById("root")
+  document.getElementById("root"),
+
+  serviceWorker.unregister()
 );
