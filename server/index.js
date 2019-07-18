@@ -41,6 +41,6 @@ app.use('/mail', mailRouter);
   })
 
 app.listen(PORT, function() {
-    console.log("Server is running on Port: " + port);
+    console.log("Server is running on Port: " + PORT);
 });
 
