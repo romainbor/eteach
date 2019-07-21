@@ -35,6 +35,7 @@ app.use('/user', userRouter);
 app.use('/comment', commentRouter);
 app.use('/mail', mailRouter);
 
+
 // Serve static assets if in production
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')) // relative path
