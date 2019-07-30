@@ -11,6 +11,7 @@ const path = require('path');
 
 const isDev = process.env.NODE_ENV !== 'production';
 const PORT = 5000;
+const PORT_CHAT = 3231
 
 
 const app = express();
@@ -25,6 +26,17 @@ const cors = require('cors');
 //   	saveUninitialized: true,
 //   	cookie: {},
 // }));
+
+var chat = require('http').createServer()
+var io = module.exports.io = require('socket.io')(chat)
+
+const SocketManager = require('./SocketManager')
+
+io.on('connection', SocketManager)
+
+chat.listen(PORT_CHAT, ()=>{
+	console.log("Connected to port:" + PORT_CHAT);
+})
 
 app.use(cors());
 app.use(bodyparser.json());

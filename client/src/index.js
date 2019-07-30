@@ -17,6 +17,7 @@ import "assets/scss/material-kit-react.scss?v=1.4.0";
 // pages for this product
 import Components from "views/Components/Components.jsx";
 import LandingPage from "views/LandingPage/LandingPage.jsx";
+import Chat from "./Chat.js";
 import ProfilePage from "views/ProfilePage/ProfilePage.jsx";
 import ProfilePageInfo from "views/ProfilePage/ProfilePageInfo.jsx";
 import LoginPage from "views/LoginPage/LoginPage.js";
@@ -45,7 +46,8 @@ ReactDOM.render(
         <Route path="/user" component={UserContainer} />
         <Route path="/user/:username" component={ProfilePageInfo} />
         <Route path="/comment" component={CommentContainer} />
-        <Route path="/" component={Components} />
+        <Route path="/chat" component={Chat} />
+        <Route path="/" component={Components} />   
       </Switch>
       
       </BrowserRouter>
