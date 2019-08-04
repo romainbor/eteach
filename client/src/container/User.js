@@ -97,36 +97,36 @@ class ListProfil extends React.Component{
                 </Parallax>
                 <div className={classNames(classes.main, classes.mainRaised)}>
                     <div className={classes.section}>
-                        <GridContainer justify="center">
-                            <GridItem xs={12} sm={12} md={8} style= {{ display: "inherit"}}>
-                                {this.state.users.map(function(item, key) {
-                                return (
-                                                                
-                                <div style= {{width: "100%", display: "inline"}}>                     
-                                    <div key = {key} style={{width: "30rem", display: "inline"}}>                                    
-                                        <Card style={{width: "20rem"}}>
-                                            <img
-                                            style={{height: "180px", width: "100%", display: "inline"}}
-                                            className={classes.imgCardTop}
-                                            src={`https://picsum.photos/70?random=${item.user_name}`}
-                                            alt="Card-img-cap"
-                                        />
-                                        <CardBody>
-                                        <h4 className={classes.cardTitle}>{item.user_name}</h4>
-                                        <p>{item.description}</p>
-                                            <Link to={`/user/${item.user_name}`}>
-                                                <Button color="primary">
-                                                    Go to profile
-                                                </Button>
-                                            </Link>
-                                        </CardBody>
-                                        </Card>
-                                    </div>
-                                    </div>  
-                                )
-                                })}  
-                                
+                    <GridContainer justify="center">
+                            
+                            {this.state.users.map(function(item, key) {
+                            return (
+                            <GridItem xs={3}>                                
+                            <div style= {{width: "100%", display: "inline"}}>                     
+                                <div key = {key} style={{width: "30rem", display: "inline"}}>                                    
+                                    <Card style={{width: "20rem"}}>
+                                        <img
+                                        style={{height: "180px", width: "100%", display: "inline"}}
+                                        className={classes.imgCardTop}
+                                        src={`https://picsum.photos/70?random=${item.user_name}`}
+                                        alt="Card-img-cap"
+                                    />
+                                    <CardBody>
+                                    <h4 className={classes.cardTitle}>{item.user_name}</h4>
+                                    <p>{item.description}</p>
+                                        <Link to={`/user/${item.user_name}`}>
+                                            <Button color="primary">
+                                                Go to profile
+                                            </Button>
+                                        </Link>
+                                    </CardBody>
+                                    </Card>
+                                </div>
+                            </div>  
                             </GridItem>
+                            )
+                            })}  
+                                
                         </GridContainer>
                     </div>
                 </div>

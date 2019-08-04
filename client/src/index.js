@@ -47,7 +47,7 @@ ReactDOM.render(
         <Route path="/user/:username" component={ProfilePageInfo} />
         <Route path="/comment" component={CommentContainer} />
         <Route path="/chat" component={Chat} />
-        <Route path="/" component={Components} />   
+        <Route path="/" component={LandingPage} />   
       </Switch>
       
       </BrowserRouter>
