@@ -9,7 +9,7 @@ export const login = (username, password, dispatch) => {
  const data = {username, password};
  let myHeaders = new Headers();
  myHeaders.append("Content-type", "application/json");
-     fetch ('https://teachonline.herokuapp.com:3001/login_check',
+     fetch ('/login_check',
      {
          method:'POST',
          mode: "cors",
