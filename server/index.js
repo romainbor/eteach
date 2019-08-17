@@ -9,7 +9,7 @@ const mailRouter = require('./routes/mail')
 const path = require('path');
 
 
-//const isDev = process.env.NODE_ENV !== 'production';
+const isDev = process.env.NODE_ENV !== 'production';
 const PORT = process.env.PORT || 5000;
 const PORT_CHAT = 3231
 
@@ -53,7 +53,7 @@ app.use('/mail', mailRouter);
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')) // relative path
   })
 
-app.listen(PORT, function() {
-    console.log("Server is running on Port: " + PORT);
-});
+  app.listen(PORT, function () {
+    console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
+  });
 
