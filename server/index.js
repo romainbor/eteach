@@ -16,7 +16,7 @@ const PORT_CHAT = 3231
 
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
+//app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
 
 const cors = require('cors');
 
@@ -49,11 +49,11 @@ app.use('/mail', mailRouter);
 
 
 // Serve static assets if in production
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')) // relative path
-  })
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')) // relative path
+})
 
-  app.listen(PORT, function () {
-    console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
-  });
+app.listen(PORT, function () {
+  console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
+});
 
