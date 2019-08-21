@@ -42,12 +42,6 @@ app.use('/', express.static(path.join(__dirname, '/client/build')));
 
 
 
-
-// Serve static assets if in production
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')) // relative path
-})
-
 app.listen(PORT, function () {
   console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
 });
