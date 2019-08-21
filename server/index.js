@@ -38,14 +38,9 @@ chat.listen(PORT_CHAT, ()=>{
 	console.log("Connected to port:" + PORT_CHAT);
 })
 
-app.use(cors());
-app.use(bodyparser.json());
-app.use(security.verifyToken);
-app.use('/', securityRouter);
-app.use('/annonce', AnnonceRouter);
-app.use('/user', userRouter);
-app.use('/comment', commentRouter);
-app.use('/mail', mailRouter);
+app.use('/', express.static(path.join(__dirname, '/client/build')));
+
+
 
 
 // Serve static assets if in production
