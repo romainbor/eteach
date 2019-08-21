@@ -38,9 +38,16 @@ chat.listen(PORT_CHAT, ()=>{
 	console.log("Connected to port:" + PORT_CHAT);
 })
 
-app.use('/', express.static(path.join(__dirname, '/client/build')));
+//app.use('/', express.static(path.join(__dirname, '/client/build')));
 
-
+app.use(cors());
+app.use(bodyparser.json());
+app.use(security.verifyToken);
+app.use('/', securityRouter);
+app.use('/annonce', AnnonceRouter);
+app.use('/user', userRouter);
+app.use('/comment', commentRouter);
+app.use('/mail', mailRouter);
 
 app.listen(PORT, function () {
   console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
