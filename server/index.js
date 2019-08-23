@@ -45,14 +45,14 @@ if (process.env.NODE_ENV === 'production') {
   app.use(cors());
   app.use(bodyparser.json());
   app.use(security.verifyToken);
-  app.use('/', securityRouter);
   app.use('/annonce', AnnonceRouter);
   app.use('/user', userRouter);
   app.use('/comment', commentRouter);
   app.use('/mail', mailRouter);
   app.get(/^\/(?!api).*/, (req, res) => { // don't serve api routes to react app
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
-  });
+  })
+  app.use('/', securityRouter);;
   console.log('Serving React App...');
 };
 
