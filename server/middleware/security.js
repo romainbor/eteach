@@ -1,6 +1,6 @@
 const verifyJWTToken = require('../libs/auth').verifyToken;
 
-const access_routes = ["/login_check", "/user", "/mail/send", "/landing-page"]
+const access_routes = ["/login_check", "/user", "/mail/send", "/landing-page", "security/login"]
 
 const verifyToken = (req, res, next) => {
     if(access_routes.indexOf(req.path) > -1) {
