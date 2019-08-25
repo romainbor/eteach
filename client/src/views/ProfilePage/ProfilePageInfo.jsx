@@ -37,7 +37,6 @@ import profilePageStyle from "assets/jss/material-kit-react/views/profilePage.js
 
 class ProfilePageInfo extends React.Component {
 
-  
   constructor(props) {
     super(props);
     this.state = {
