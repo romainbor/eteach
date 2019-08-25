@@ -145,18 +145,15 @@ class ProfilePageInfo extends React.Component {
                           )
                         },
                         {
-                          tabButton: "Annonce",
+                          tabButton: "Passe-temps",
                           tabContent: (
                             <span>
                               <p>
-                                Efficiently unleash cross-media information without
-                                cross-media value. Quickly maximize timely
-                                deliverables for real-time schemas.
+                                Mon passe-temps favori est la création de bijoux.
                               </p>
                               <br />
                               <p>
-                                Dramatically maintain clicks-and-mortar solutions
-                                without functional solutions.
+                                Mon deuxième passe-temps favori est la natation.
                               </p>
                             </span>
                           )

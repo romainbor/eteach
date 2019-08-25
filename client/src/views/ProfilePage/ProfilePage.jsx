@@ -125,24 +125,7 @@ class ProfilePage extends React.Component {
                               </p>
                             </span>
                           )
-                        },
-                        {
-                          tabButton: "Annonce",
-                          tabContent: (
-                            <span>
-                              <p>
-                                Efficiently unleash cross-media information without
-                                cross-media value. Quickly maximize timely
-                                deliverables for real-time schemas.
-                              </p>
-                              <br />
-                              <p>
-                                Dramatically maintain clicks-and-mortar solutions
-                                without functional solutions.
-                              </p>
-                            </span>
-                          )
-                        },
+                        }
                       ]}
                       
                     />
