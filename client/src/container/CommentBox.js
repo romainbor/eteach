@@ -103,7 +103,7 @@ class CommentBox extends Component {
     let myHeaders = new Headers();
         myHeaders.append("Content-type", "application/json");
         myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));
-    fetch(URL + this.props.profile_name,
+    fetch(URL,
       {
           method:'GET',
           mode: "cors",
