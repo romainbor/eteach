@@ -32,7 +32,7 @@ class RegisterForm extends React.Component{
   constructor(props) {
     super(props);
 
-    const URL='https://teachonline.herokuapp.com/skills?username=';
+    const URL='/skills?username=';
         let skill = new Array();
         // ...
         let myHeaders = new Headers();
