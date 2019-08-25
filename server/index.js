@@ -34,9 +34,9 @@ const SocketManager = require('./SocketManager')
 
 io.on('connection', SocketManager)
 
-chat.listen(PORT_CHAT, ()=>{
+/*chat.listen(PORT_CHAT, ()=>{
 	console.log("Connected to port:" + PORT_CHAT);
-})
+})*/
 
 //app.use('/', express.static(path.join(__dirname, '/client/build')));
 //app.use('/', express.static(path.join(__dirname, '/client/build')));

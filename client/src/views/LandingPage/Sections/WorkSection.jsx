@@ -59,7 +59,7 @@ class WorkSection extends React.Component {
       <div className={classes.section}>
         <GridContainer justify="center">
           <GridItem cs={12} sm={12} md={8}>
-            <h2 className={classes.title}>Faites part de vos commentaires</h2>
+            <h2 className={classes.title}>Faites-nous part de vos commentaires</h2>
             <h4 className={classes.description}>
               N'hésitez pas à faire part de vos commentaires. Si vous souhaitez des nouveautés, des améliorations
               ou simplement donner votre avis sur l'application

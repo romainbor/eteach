@@ -21,9 +21,9 @@ class ProductSection extends React.Component {
           <GridItem xs={12} sm={12} md={8}>
             <h2 className={classes.title}>Parlons du produit plus en détails</h2>
             <h5 className={classes.description}>
-              E-teach permet pour des étudiants de rechercher des cours particuliers. Le choix est donné aux professeurs
-              de pouvoir dispenser ses cours par internet(à distance ou via du e-learning) ou en face à face. L'étudiant
-              lui pourra à l'aide de recherche renseigner les niveaux qu'ils recherchent.
+              E-teach permet pour des écoliers et collégiens de rechercher des cours particuliers. Le choix est donné aux professeurs
+              de pouvoir dispenser ses cours par internet (à distance ou via du e-learning) ou en face à face. L'étudiant,
+              lui, pourra à l'aide de recherche, renseigner les niveaux qu'il recherche.
             </h5>
           </GridItem>
         </GridContainer>
@@ -31,8 +31,8 @@ class ProductSection extends React.Component {
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
               <InfoArea
-                title="Profile simple à créer"
-                description="Création rapide du profil. Fini les 10 pages demandant toutes sortes d'informations."
+                title="Profil simple à créer"
+                description="Création rapide du profil. Finies les 10 pages demandant toutes sortes d'informations."
                 icon={Chat}
                 iconColor="info"
                 vertical
@@ -41,7 +41,7 @@ class ProductSection extends React.Component {
             <GridItem xs={12} sm={12} md={6}>
               <InfoArea
                 title="Commentaires"
-                description="Le système de commentaires se fait par le retours des étudiants et des professeurs. Il a pour but d'établir un retour sur leurs expériences communes"
+                description="Le système de commentaires se fait par le retour des élèves et des professeurs. Il a pour but d'établir un retour sur leurs expériences communes"
                 icon={VerifiedUser}
                 iconColor="success"
                 vertical

@@ -125,6 +125,20 @@ class ProfilePage extends React.Component {
                               </p>
                             </span>
                           )
+                        },
+                        {
+                          tabButton: "Passe-temps",
+                          tabContent: (
+                            <span>
+                              <p>
+                                Mon passe-temps favori est la création de bijoux.
+                              </p>
+                              <br />
+                              <p>
+                                Mon deuxième passe-temps favori est la natation.
+                              </p>
+                            </span>
+                          )
                         }
                       ]}
                       
@@ -212,6 +226,21 @@ class ProfilePage extends React.Component {
                             </span>
                           )
                         },
+                        ,
+                        {
+                          tabButton: "Passe-temps",
+                          tabContent: (
+                            <span>
+                              <p>
+                                Mon passe-temps favori est la création de bijoux.
+                              </p>
+                              <br />
+                              <p>
+                                Mon deuxième passe-temps favori est la natation.
+                              </p>
+                            </span>
+                          )
+                        }
                       ]}
                     />
                     
