@@ -44,7 +44,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('../client/build')); // serve the static react app
   app.use(cors());
   app.use(bodyparser.json());
-//  app.use(security.verifyToken);
+  app.use(security.verifyToken);
   app.use('/annonce', AnnonceRouter);
   app.use('/user', userRouter);
   app.use('/comment', commentRouter);
