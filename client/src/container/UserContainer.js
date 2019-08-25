@@ -12,8 +12,8 @@ class UserContainer extends React.Component{
         return(           
             <Switch>
                 <Route path="/user/list" render={() => <ListProfil/>}/>
-                <Route path="/user/:username" render={() => <ProfilPageInfo/>}/>
-            </Switch>           
+                <Route path="/user/:username" component={ProfilPageInfo} />
+            </Switch>            
         );
     }
 }
