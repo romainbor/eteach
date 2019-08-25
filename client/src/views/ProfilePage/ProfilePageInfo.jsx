@@ -51,7 +51,7 @@ class ProfilePageInfo extends React.Component {
   getData() {
   
   const data_username = this.props.match.url
-  const URL=`https://teachonline.herokuapp.com/` + data_username;
+  const URL=`https://teachonline.herokuapp.com` + data_username;
   let skill = new Array();
   // ...
   let myHeaders = new Headers();
