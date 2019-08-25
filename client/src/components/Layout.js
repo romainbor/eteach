@@ -4,7 +4,7 @@ import { USER_CONNECTED, LOGOUT } from '../Events'
 import LoginForm from './LoginForm'
 import ChatContainer from './chats/ChatContainer'
 
-port = process.env.PORT;
+const port = process.env.PORT;
 const socketUrl = "https://teachonline.herokuapp.com:" + port 
 export default class Layout extends React.Component {
 
