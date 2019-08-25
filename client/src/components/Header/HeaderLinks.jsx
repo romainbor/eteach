@@ -55,6 +55,9 @@ function HeaderLinks({ ...props }) {
               <Link to="/user/list" className={classes.dropdownLink}>
                 Utilisateurs
               </Link>,
+              <Link to="/chat" className={classes.dropdownLink}>
+                Chat
+              </Link>,
               <Link to="/security/login" className={classes.dropdownLink} onClick={deconnexion}>
                 Deconnexion
               </Link>

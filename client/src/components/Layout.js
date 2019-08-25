@@ -5,8 +5,8 @@ import LoginForm from './LoginForm'
 import ChatContainer from './chats/ChatContainer'
 
 const socketUrl = "http://localhost:3231"
-export default class Layout extends Component {
-	
+export default class Layout extends React.Component {
+
 	constructor(props) {
 	  super(props);
 	
@@ -57,7 +57,7 @@ export default class Layout extends Component {
 	render() {
 		const { socket, user } = this.state
 		return (
-			<div className="container">
+			<div>
 				{
 					!user ?	
 					<LoginForm socket={socket} setUser={this.setUser} />
