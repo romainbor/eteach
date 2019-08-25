@@ -93,6 +93,7 @@ class LoginForm extends React.Component {
                       <form onSubmit={this.handleSubmit} className={classes.form}>
                         <p className={classes.divider}>Connexion au chat.</p>
 						<p className={classes.divider}>Utilisez le même pseudo que votre nom d'utilisateur.</p>
+						<p className={classes.divider}>Cliquez sur la flèche en bas à gauche pour vous déconnecter.</p>
                         <CardBody>
                           <CustomInput
                             labelText="nickname"
