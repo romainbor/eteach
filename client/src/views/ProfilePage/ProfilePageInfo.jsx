@@ -37,6 +37,7 @@ import profilePageStyle from "assets/jss/material-kit-react/views/profilePage.js
 
 class ProfilePageInfo extends React.Component {
 
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -47,10 +48,10 @@ class ProfilePageInfo extends React.Component {
   componentDidMount() {
     this.getData();
   }
-getData() {
+  getData() {
   
-
-  const URL=`https://teachonline.herokuapp.com/user/test`;
+  const data_username = this.props.match.url
+  const URL=`https://teachonline.herokuapp.com/` + data_username;
   let skill = new Array();
   // ...
   let myHeaders = new Headers();
@@ -68,13 +69,16 @@ getData() {
 
       })
       .catch(error =>(error));
-}
+  }
   category_profil = localStorage.getItem('category');
 
         
     render() {
-      console.log(this.props.params)
+      console.log(localStorage.getItem('tokenJWT'));
+      const { params } = this.props.match
+      console.log(this.props.match.url)
       const { data_profil } = this.state;
+      console.log( {data_profil });
       if(this.category_profil == "teacher"){
         const { classes, ...rest } = this.props;
         const imageClasses = classNames(
@@ -118,6 +122,7 @@ getData() {
                           <div className={classes.name}>
                           <h3 className={classes.title}>{data_profil.category} </h3>
                               <h6>Matière(s) enseignée(s)</h6>
+                              <p>{params.id}</p>
                             <h6>{data_profil.skills}</h6>
                           </div>
                         </div>
