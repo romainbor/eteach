@@ -165,11 +165,6 @@ class ProfilePageInfo extends React.Component {
                       ]}
                       
                     />
-                  <Link to={"/annonce/create"} className={classes.link}>
-                    <Button color="primary" size="lg" simple>
-                      Créer une annonce
-                    </Button>
-                  </Link>
 
 
                   </div>
