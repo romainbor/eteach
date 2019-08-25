@@ -11,7 +11,7 @@ const path = require('path');
 
 const isDev = process.env.NODE_ENV !== 'production';
 const PORT = process.env.PORT || 5000;
-const PORT_CHAT = 3231
+const PORT_CHAT = process.env.PORT || 3231;
 
 
 const app = express();
@@ -27,7 +27,7 @@ const cors = require('cors');
 //   	cookie: {},
 // }));
 
-var chat = require('http').createServer()
+var chat = require('https').createServer()
 var io = module.exports.io = require('socket.io')(chat)
 
 const SocketManager = require('./SocketManager')
