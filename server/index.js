@@ -34,7 +34,9 @@ const SocketManager = require('./SocketManager')
 
 io.on('connection', SocketManager)
 
-
+chat.listen(PORT_CHAT, ()=>{
+	console.log("Connected to port:" + PORT_CHAT);
+})
 
 //app.use('/', express.static(path.join(__dirname, '/client/build')));
 //app.use('/', express.static(path.join(__dirname, '/client/build')));
@@ -56,8 +58,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 
-var server = app.listen(PORT, function () {
+app.listen(PORT, function () {
   console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
 });
 
-chat.listen(server)
