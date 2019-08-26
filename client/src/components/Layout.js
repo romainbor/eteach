@@ -4,7 +4,7 @@ import { USER_CONNECTED, LOGOUT } from '../Events'
 import LoginForm from './LoginForm'
 import ChatContainer from './chats/ChatContainer'
 
-//const socketUrl = "https://teachonline.herokuapp.com"
+const socketUrl = "https://teachonline.herokuapp.com"
 export default class Layout extends React.Component {
 
 	constructor(props) {
@@ -24,10 +24,10 @@ export default class Layout extends React.Component {
 	*	Connect to and initializes the socket.
 	*/
 	initSocket = ()=>{
-		const socket = io.connect(window.location.hostname);
-		console.log("test");
+		const socket = io(socketUrl)
+
 		socket.on('connect', ()=>{
-			console.log("Connected");
+			console.log("Chat Connected");
 		})
 		
 		this.setState({socket})
