@@ -11,21 +11,14 @@ const path = require('path');
 
 const isDev = process.env.NODE_ENV !== 'production';
 const PORT = process.env.PORT || 5000;
-const PORT_CHAT = 3231;
+//const PORT_CHAT = 3231;
 
 
 const app = express();
 
-//app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
 
 const cors = require('cors');
 
-// app.use(session({
-// 	secret: 'keyboard cat',
-//   	resave: false,
-//   	saveUninitialized: true,
-//   	cookie: {},
-// }));
 
 var chat = require('https').createServer(app)
 var io = module.exports.io = require('socket.io')(chat)
@@ -45,6 +38,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(cors());
   app.use(bodyparser.json());
   app.use(security.verifyToken);
+  app.use('/', securityRouter);
   app.use('/annonce', AnnonceRouter);
   app.use('/user', userRouter);
   app.use('/comment', commentRouter);
@@ -52,7 +46,7 @@ if (process.env.NODE_ENV === 'production') {
   app.get(/^\/(?!api).*/, (req, res) => { // don't serve api routes to react app
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
   })
-  app.use('/', securityRouter);;
+  
   console.log('Serving React App...');
 };
 
