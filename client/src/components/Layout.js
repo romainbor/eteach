@@ -17,6 +17,7 @@ export default class Layout extends React.Component {
 	}
 
 	componentWillMount() {
+		console.log("toto");
 		this.initSocket()
 	}
 
