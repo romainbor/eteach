@@ -25,14 +25,12 @@ export default class Layout extends React.Component {
 	*/
 	initSocket = ()=>{
 
-		let myHeaders = new Headers();
-		myHeaders.append("Content-type", "application/json");
-        myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));
+
 		const socket = io(socketUrl,  {
 			transportOptions:{
 				polling: {
 				  extraHeaders: {
-					Authorization: myHeaders
+					Authorization: localStorage.getItem('tokenJWT')
 				  }
 				}
 			}
