@@ -11,7 +11,7 @@ class AnnonceContainer extends React.Component{
 
     handleSubmit = (data) => {
         const { history } = this.props;
-        this.props.add_annonce(data.user, data.tarif,data.description, data.selectedOption.label,data.niveau, data.departement, data.email, this.props.dispatch);    
+        this.props.add_annonce(data.user, data.tarif,data.description, data.skill, data.niveau, data.departement, data.email, this.props.dispatch);    
         history.push('/profile-page');    
     }
      
