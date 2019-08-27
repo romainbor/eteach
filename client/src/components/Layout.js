@@ -29,14 +29,15 @@ export default class Layout extends React.Component {
 		myHeaders.append("Content-type", "application/json");
         myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));
 		const socket = io(socketUrl,  {
-			transports: ['polling', 'websocket'], // or simply omit since this is the default
-			// Send the authorization header in the initial connection request
-			polling: {
-			extraHeaders: {
-				Authorization: myHeaders
+			transportOptions:{
+				polling: {
+				  extraHeaders: {
+					Authorization: myHeaders
+				  }
+				}
 			}
-		}
 		})
+		
 		socket.on('connect', ()=>{
 			console.log("Chat Connected");
 		})
