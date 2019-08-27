@@ -211,7 +211,7 @@ class ProfilePageInfo extends React.Component {
                             <img src={profile} alt="..." className={imageClasses} />
                           </div>
                           <div className={classes.name}>
-                            <h3 className={classes.title}>{data_profil.user}</h3>
+                            <h3 className={classes.title}>{data_profil.user_name}</h3>
                           </div><br />
                           <div className={classes.name}>
                           <h3 className={classes.title}>{data_profil.category} </h3>
@@ -236,6 +236,20 @@ class ProfilePageInfo extends React.Component {
                                   Les matières que je souhaite perfectionner sont : {data_profil.skills}
                               </p>
                               <br />
+                            </span>
+                          )
+                        },
+                        {
+                          tabButton: "Passe-temps",
+                          tabContent: (
+                            <span>
+                              <p>
+                                Mon passe-temps favori est la création de bijoux.
+                              </p>
+                              <br />
+                              <p>
+                                Mon deuxième passe-temps favori est la natation.
+                              </p>
                             </span>
                           )
                         },

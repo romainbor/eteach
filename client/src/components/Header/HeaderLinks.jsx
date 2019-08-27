@@ -47,7 +47,7 @@ function HeaderLinks({ ...props }) {
                 Page d'accueil
               </Link>,
               <Link to="/profile-page" className={classes.dropdownLink}>
-                Profile page
+                Profil
               </Link>,
               <Link to="/annonce/list" className={classes.dropdownLink}>
                 Annonces

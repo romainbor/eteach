@@ -120,7 +120,7 @@ class RegisterForm extends React.Component{
                       <p className={classes.divider}>Création d'une annonce</p>
                       <CardBody>
                         <CustomInput
-                          labelText="tarif"
+                          labelText="tarif (euros)"
                           id="tarif"
                           formControlProps={{
                             fullWidth: true,
@@ -178,7 +178,7 @@ class RegisterForm extends React.Component{
                             }}
                         />
                         <CustomInput
-                          labelText="departement"
+                          labelText="departement (ex: 77)"
                           id="departement"
                           formControlProps={{
                             fullWidth: true,
@@ -242,7 +242,7 @@ class RegisterForm extends React.Component{
                             control={
                               <Radio
                                 checked={this.state.niveau === "elementaire"}
-                                onChange={this.handleChangeSkill}
+                                onChange={this.handleChangeEnabled}
                                 value="elementaire"
                                 name="elementaire"
                                 aria-label="elementaire"
@@ -266,7 +266,7 @@ class RegisterForm extends React.Component{
                           />
                         </div>
                         <CustomInput
-                          labelText="skill"
+                          labelText="Matière"
                           id="skill"
                           formControlProps={{
                             fullWidth: true,
