@@ -268,7 +268,7 @@ class RegisterForm extends React.Component{
                     control={
                       <Radio
                         checked={this.state.niveau === "elementaire"}
-                        onChange={this.handleChangeEnabled}
+                        onChange={this.handleChangeSkill}
                         value="elementaire"
                         name="elementaire"
                         aria-label="elementaire"
