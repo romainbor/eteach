@@ -31,13 +31,14 @@ export default class Layout extends React.Component {
 			method:'GET',
 			mode: "cors",
 			headers : myHeaders
-		}
+		})
 		.then(response => response.json())
+		.then(socket.on('connect', ()=>{
+			console.log("Chat Connected");
+		}))
 		.catch(error => (error));
 
-		socket.on('connect', ()=>{
-			console.log("Chat Connected");
-		})
+		
 		
 		this.setState({socket})
 	}
