@@ -291,11 +291,25 @@ class RegisterForm extends React.Component{
                     label="elementaire"
                   />
                 </div>
-                          <Select
-                          value={selectedOption}
-                          onChange={this.handleChangeSelect}
-                          options={this.skill}
-                          />
+                <CustomInput
+                  labelText="skill"
+                  id="skill"
+                  formControlProps={{
+                    fullWidth: true,
+                    value:this.state.value,
+                    onChange:this.handleChangeSelect,
+                  }}
+                  inputProps={{
+                    type: "text",
+                    
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        
+                        <People className={classes.inputIconsColor} />
+                      </InputAdornment>
+                    )
+                  }}
+                />
                       </CardBody>
                       <CardFooter className={classes.cardFooter}>
                         <Button type="submit" simple color="primary" size="lg">
