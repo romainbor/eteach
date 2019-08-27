@@ -222,94 +222,94 @@ class RegisterForm extends React.Component{
                               </InputAdornment>
                             )
                           }}
+                        />
+                        <div
+                          className={
+                            classes.checkboxAndRadio +
+                            " " +
+                            classes.checkboxAndRadioHorizontal
+                          }
+                        >
+                          <FormControlLabel
+                            control={
+                              <Radio
+                                checked={this.state.niveau === "college"}
+                                onChange={this.handleChangeEnabled}
+                                value="college"
+                                name="college"
+                                aria-label="college"
+                                icon={
+                                  <FiberManualRecord
+                                    className={classes.radioUnchecked}
+                                  />
+                                }
+                                checkedIcon={
+                                  <FiberManualRecord className={classes.radioChecked} />
+                                }
+                                classes={{
+                                  checked: classes.radio
+                                }}
+                              />
+                            }
+                            classes={{
+                              label: classes.label
+                            }}
+                            label="college"
                           />
-                      <div
-                        className={
-                          classes.checkboxAndRadio +
-                          " " +
-                          classes.checkboxAndRadioHorizontal
-                        }
-                      >
-                  <FormControlLabel
-                    control={
-                      <Radio
-                        checked={this.state.niveau === "college"}
-                        onChange={this.handleChangeEnabled}
-                        value="college"
-                        name="college"
-                        aria-label="college"
-                        icon={
-                          <FiberManualRecord
-                            className={classes.radioUnchecked}
+                        </div>
+                        <div
+                          className={
+                            classes.checkboxAndRadio +
+                            " " +
+                            classes.checkboxAndRadioHorizontal
+                          }
+                        >
+                          <FormControlLabel
+                            control={
+                              <Radio
+                                checked={this.state.niveau === "elementaire"}
+                                onChange={this.handleChangeSkill}
+                                value="elementaire"
+                                name="elementaire"
+                                aria-label="elementaire"
+                                icon={
+                                  <FiberManualRecord
+                                    className={classes.radioUnchecked}
+                                  />
+                                }
+                                checkedIcon={
+                                  <FiberManualRecord className={classes.radioChecked} />
+                                }
+                                classes={{
+                                  checked: classes.radio
+                                }}
+                              />
+                            }
+                            classes={{
+                              label: classes.label
+                            }}
+                            label="elementaire"
                           />
-                        }
-                        checkedIcon={
-                          <FiberManualRecord className={classes.radioChecked} />
-                        }
-                        classes={{
-                          checked: classes.radio
-                        }}
-                      />
-                    }
-                    classes={{
-                      label: classes.label
-                    }}
-                    label="college"
-                  />
-                </div>
-                <div
-                  className={
-                    classes.checkboxAndRadio +
-                    " " +
-                    classes.checkboxAndRadioHorizontal
-                  }
-                >
-                  <FormControlLabel
-                    control={
-                      <Radio
-                        checked={this.state.niveau === "elementaire"}
-                        onChange={this.handleChangeSkill}
-                        value="elementaire"
-                        name="elementaire"
-                        aria-label="elementaire"
-                        icon={
-                          <FiberManualRecord
-                            className={classes.radioUnchecked}
-                          />
-                        }
-                        checkedIcon={
-                          <FiberManualRecord className={classes.radioChecked} />
-                        }
-                        classes={{
-                          checked: classes.radio
-                        }}
-                      />
-                    }
-                    classes={{
-                      label: classes.label
-                    }}
-                    label="elementaire"
-                  />
-                </div>
-                <CustomInput
-                  labelText="skill"
-                  id="skill"
-                  formControlProps={{
-                    fullWidth: true,
-                    value:this.state.value,
-                    onChange:this.handleChangeSelect,
-                  }}
-                  inputProps={{
-                    type: "text",
-                    
-                    endAdornment: (
-                      <InputAdornment position="end">
-                        
-                        <People className={classes.inputIconsColor} />
-                      </InputAdornment>
-                    )
-                  }}
-                />
+                        </div>
+                        <CustomInput
+                          labelText="skill"
+                          id="skill"
+                          formControlProps={{
+                            fullWidth: true,
+                            value:this.state.value,
+                            onChange:this.handleChangeSelect,
+                          }}
+                          inputProps={{
+                            type: "text",
+                            
+                            endAdornment: (
+                              <InputAdornment position="end">
+                                
+                                <People className={classes.inputIconsColor} />
+                              </InputAdornment>
+                            )
+                          }}
+                        />
                       </CardBody>
                       <CardFooter className={classes.cardFooter}>
                         <Button type="submit" simple color="primary" size="lg">
