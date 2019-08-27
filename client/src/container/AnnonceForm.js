@@ -50,7 +50,6 @@ class RegisterForm extends React.Component{
   state = {
         tarif:"",
         description: "",
-        selectedOption: null,
   }
 
 
@@ -70,9 +69,7 @@ class RegisterForm extends React.Component{
     this.setState({skill: event.target.value});
   }
 
-  handleChangeSelect = selectedOption => {
-    this.setState({ selectedOption });
-  };
+
   handleChangeEnabled(event) {
     this.setState({
       niveau: event.target.value
@@ -95,7 +92,6 @@ class RegisterForm extends React.Component{
   render() {
     const { classes, ...rest } = this.props;
 
-    const { selectedOption } = this.state;
 
     return (
     <div>
