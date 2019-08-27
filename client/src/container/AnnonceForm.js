@@ -28,30 +28,8 @@ import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
 import image from "assets/img/bg7.jpg";
 
 class RegisterForm extends React.Component{
-    skill = [];
   constructor(props) {
     super(props);
-
-    const URL='skills?username=';
-        let skill = new Array();
-        // ...
-        let myHeaders = new Headers();
-        myHeaders.append("Content-type", "application/json");
-        myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));
-            fetch (URL + localStorage.getItem('user_name'),
-            {
-                method:'GET',
-                mode: "cors",
-                headers : myHeaders
-            })
-            .then(response => response.json())
-            .then(data => {
-                data.user_skill.map(x => {
-                    this.skill.push({label: x, value: x});
-                });
-            })
-            .catch(error => (error));
-
     this.state = {tarif: ''};
     this.state = {skill: ''};
     this.state = {description: ''};
@@ -297,7 +275,7 @@ class RegisterForm extends React.Component{
                           formControlProps={{
                             fullWidth: true,
                             value:this.state.value,
-                            onChange:this.handleChangeSelect,
+                            onChange:this.handleChangeSkill,
                           }}
                           inputProps={{
                             type: "text",
