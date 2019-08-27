@@ -17,7 +17,6 @@ export default class Layout extends React.Component {
 	}
 
 	componentWillMount() {
-		console.log("toto");
 		this.initSocket()
 	}
 
@@ -25,22 +24,22 @@ export default class Layout extends React.Component {
 	*	Connect to and initializes the socket.
 	*/
 	initSocket = ()=>{
-		console.log("titi");
-		let myHeaders = new Headers();
-        myHeaders.append("Content-type", "application/json");
-        myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));
-		const socket = io(socketUrl, {
-			method:'GET',
-			mode: "cors",
-			headers : myHeaders
-		})
-		.then(response => response.json())
-		.then(socket.on('connect', ()=>{
-			console.log("Chat Connected");
-		}))
-		.catch(error => (error));
 
-		
+		let myHeaders = new Headers();
+		myHeaders.append("Content-type", "application/json");
+        myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));
+		const socket = io(socketUrl,  {
+			transports: ['polling', 'websocket'], // or simply omit since this is the default
+			// Send the authorization header in the initial connection request
+			polling: {
+			extraHeaders: {
+				Authorization: myHeaders
+			}
+		}
+		})
+		socket.on('connect', ()=>{
+			console.log("Chat Connected");
+		})
 		
 		this.setState({socket})
 	}
