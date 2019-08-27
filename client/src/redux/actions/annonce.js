@@ -3,7 +3,7 @@ export const add_annonce = (user, tarif, description, skill, niveau, departement
     let myHeaders = new Headers();
     myHeaders.append("Content-type", "application/json");
     myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));
-        fetch ('https://teachonline.herokuapp.com/annonce/create',
+        fetch ('/annonce/create',
         {
             method:'POST',
             mode: "cors",
