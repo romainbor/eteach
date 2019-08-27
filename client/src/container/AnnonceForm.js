@@ -120,7 +120,7 @@ class RegisterForm extends React.Component{
                       <p className={classes.divider}>Création d'une annonce</p>
                       <CardBody>
                         <CustomInput
-                          labelText="tarif (euros)"
+                          labelText="tarif (en euros, ex : 50)"
                           id="tarif"
                           formControlProps={{
                             fullWidth: true,
@@ -266,7 +266,7 @@ class RegisterForm extends React.Component{
                           />
                         </div>
                         <CustomInput
-                          labelText="Matière"
+                          labelText="Matière (indiquer une seule matière)"
                           id="skill"
                           formControlProps={{
                             fullWidth: true,
