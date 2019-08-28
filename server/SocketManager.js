@@ -11,7 +11,7 @@ let connectedUsers = { }
 let communityChat = createChat({ isCommunity:true })
 
 module.exports = function(socket){
-					
+
 	// console.log('\x1bc'); //clears console
 	console.log("Socket Id:" + socket.id);
 

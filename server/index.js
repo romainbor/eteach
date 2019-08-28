@@ -24,11 +24,6 @@ var io = module.exports.io = require('socket.io').listen(chat)
 
 const SocketManager = require('./SocketManager')
 
-io.configure(function () { 
-  io.set("transports", ["xhr-polling"]); 
-  io.set("polling duration", 10); 
-});
-
 io.on('connection', SocketManager)
 
 
