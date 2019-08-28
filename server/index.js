@@ -8,7 +8,6 @@ const commentRouter = require('./routes/comment');
 const mailRouter = require('./routes/mail')
 const path = require('path');
 
-
 const isDev = process.env.NODE_ENV !== 'production';
 const PORT = process.env.PORT || 5000;
 //const PORT_CHAT = 3231;
@@ -31,7 +30,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('../client/build')); // serve the static react app
   app.use(cors());
   app.use(bodyparser.json());
-  app.use(security.verifyToken);
+  //app.use(security.verifyToken);
   app.use('/', securityRouter);
   app.use('/annonce', AnnonceRouter);
   app.use('/user', userRouter);
