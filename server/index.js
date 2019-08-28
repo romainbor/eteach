@@ -19,18 +19,14 @@ const app = express();
 const cors = require('cors');
 
 
-
-var chat = require('http').createServer()
-var io = module.exports.io = require('socket.io')(chat)
-
+var chat = require('https').createServer(app)
+var io = module.exports.io = require('socket.io').listen(chat)
 
 const SocketManager = require('./SocketManager')
 
 io.on('connection', SocketManager)
 
-chat.listen(PORT, ()=>{
-	console.log("Connected to port:" + PORT);
-})
+
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('../client/build')); // serve the static react app
