@@ -4,7 +4,7 @@ import { USER_CONNECTED, LOGOUT } from '../Events'
 import LoginForm from './LoginForm'
 import ChatContainer from './chats/ChatContainer'
 
-const socketUrl = "https://teachonline.herokuapp.com:"
+const socketUrl = "https://teachonline.herokuapp.com"
 export default class Layout extends React.Component {
 
 	constructor(props) {
