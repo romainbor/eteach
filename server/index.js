@@ -28,7 +28,6 @@ io.on('connection', (SocketManager) =>{
     console.log('Client connected');
     SocketManager.on('disconnect', () => console.log('Client disconnected'));
   });
-})
 
 
 
