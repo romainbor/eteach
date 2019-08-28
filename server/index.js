@@ -19,12 +19,20 @@ const app = express();
 const cors = require('cors');
 
 
-var chat = require('http').createServer(app)
+var chat = require('https').createServer(app)
 var io = module.exports.io = require('socket.io').listen(chat)
 
 const SocketManager = require('./SocketManager')
 
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
+
 io.on('connection', SocketManager)
+
+
+
 
 
 
