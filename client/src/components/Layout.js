@@ -25,7 +25,7 @@ export default class Layout extends React.Component {
 	*/
 	initSocket = ()=>{
 		const socket = io(socketUrl)
-
+		console.log("toto");
 		socket.on('connect', ()=>{
 			console.log("chat Connected");
 		})
