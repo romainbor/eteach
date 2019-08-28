@@ -24,27 +24,16 @@ export default class Layout extends React.Component {
 	*	Connect to and initializes the socket.
 	*/
 	initSocket = ()=>{
+		const socket = io(socketUrl)
 
-		let myHeaders = new Headers();
-		myHeaders.append("Content-type", "application/json");
-        myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));
-		const socket = io(socketUrl,  {
-			transportOptions:{
-				polling: {
-				  extraHeaders: {
-					Authorization: myHeaders
-				  }
-				}
-			}
-		})
-		
 		socket.on('connect', ()=>{
-			console.log("Chat Connected");
+			console.log("chat Connected");
 		})
 		
 		this.setState({socket})
 	}
-
+		
+	
 	/*
 	* 	Sets the user property in state 
 	*	@param user {id:number, name:string}
