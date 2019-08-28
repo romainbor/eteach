@@ -24,6 +24,7 @@ export default class Layout extends React.Component {
 	*	Connect to and initializes the socket.
 	*/
 	initSocket = ()=>{
+		console.log(socketUrl)
 		const socket = io(socketUrl)
 		console.log(socket);
 		console.log("toto");
