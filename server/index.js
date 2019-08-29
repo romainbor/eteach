@@ -46,7 +46,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 
-app.listen(PORT, function () {
+server.listen(PORT, function () {
   console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
 });
 
