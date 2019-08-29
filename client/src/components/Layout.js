@@ -41,7 +41,7 @@ export default class Layout extends React.Component {
 	}
 
 	reconnect = (socket) => {
-		socket.emit(VERIFY_USER, this.setState.user.name, ({ isUser, user}) => {
+		socket.emit(VERIFY_USER, this.state.user.name, ({ isUser, user}) => {
 			if(isUser){
 				this.setState({ user:null })
 			}
