@@ -11,7 +11,8 @@ let connectedUsers = { }
 let communityChat = createChat({ isCommunity:true })
 
 module.exports = function(socket){
-					
+	
+	console.log("tchi" + io);
 	// console.log('\x1bc'); //clears console
 	console.log("Socket Id:" + socket.id);
 
@@ -36,7 +37,7 @@ module.exports = function(socket){
 
 		sendMessageToChatFromUser = sendMessageToChat(user.name)
 		sendTypingFromUser = sendTypingToChat(user.name)
-		console.log(io);
+		console.log("roolo" + io);
 		io.emit(USER_CONNECTED, connectedUsers)
 		console.log(connectedUsers);
 

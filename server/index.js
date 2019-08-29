@@ -19,7 +19,7 @@ const SocketManager = require('./SocketManager')
 const server = require('http').Server(app)
 const io = module.exports.io = require('socket.io')(server)
 
-console.log(io);
+console.log("tutu" + io);
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('../client/build')); // serve the static react app
   io.on('connection', SocketManager)
