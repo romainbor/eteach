@@ -36,7 +36,7 @@ module.exports = function(socket){
 
 		sendMessageToChatFromUser = sendMessageToChat(user.name)
 		sendTypingFromUser = sendTypingToChat(user.name)
-
+		console.log(io);
 		io.emit(USER_CONNECTED, connectedUsers)
 		console.log(connectedUsers);
 
