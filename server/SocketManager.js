@@ -9,7 +9,6 @@ const { createUser, createMessage, createChat } = require('../client/src/Factori
 let connectedUsers = { }
 
 let communityChat = createChat({ isCommunity:true })
- 
 
 module.exports = function(socket){
 					
