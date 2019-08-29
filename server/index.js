@@ -24,12 +24,7 @@ var io = module.exports.io = require('socket.io').listen(chat)
 
 const SocketManager = require('./SocketManager')
 
-io.on('connection', (SocketManager) =>{
-    console.log('Client connected');
-    SocketManager.on('disconnect', () => console.log('Client disconnected'));
-  });
-
-
+io.on('connection', SocketManager)
 
 
 
