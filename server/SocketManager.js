@@ -10,6 +10,7 @@ let connectedUsers = { }
 
 let communityChat = createChat({ isCommunity:true })
 
+console.log("test555" + io)
 module.exports = function(socket){
 	
 	console.log("tchi" + io);
