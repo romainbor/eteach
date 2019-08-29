@@ -22,13 +22,14 @@ const io = module.exports.io = require('socket.io')(server)
 
 
 
-io.on('connection', SocketManager)
+
 
 
 
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('../client/build')); // serve the static react app
+  io.on('connection', SocketManager)
   app.use(cors());
   app.use(bodyparser.json());
   //app.use(security.verifyToken);
