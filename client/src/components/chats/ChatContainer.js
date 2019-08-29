@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import withStyles from "@material-ui/core/styles/withStyles";
 import SideBar from '../sidebar/SideBar'
 import { COMMUNITY_CHAT, MESSAGE_SENT, MESSAGE_RECIEVED, 
 				TYPING, PRIVATE_MESSAGE, USER_CONNECTED, USER_DISCONNECTED,
@@ -8,7 +7,6 @@ import ChatHeading from './ChatHeading'
 import Messages from '../messages/Messages'
 import MessageInput from '../messages/MessageInput'
 import { values, difference, differenceBy } from 'lodash'
-import '../../index.css';
 
 export default class ChatContainer extends Component {
 	constructor(props) {
