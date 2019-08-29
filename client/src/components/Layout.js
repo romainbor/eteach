@@ -38,6 +38,18 @@ export default class Layout extends React.Component {
 		
 		this.setState({socket})
 	}
+			/**
+	 * Reverifies user with socket and then resets user.
+	 */
+	reconnect = (socket) => {
+		socket.emit(VERIFY_USER, this.state.user.name, ({ isUser, user })=>{
+			if(isUser){
+				this.setState({ user:null })
+			}else{
+				this.setUser(user)
+			}
+		})
+	}
 		
 	
 	/*
@@ -50,18 +62,7 @@ export default class Layout extends React.Component {
 		this.setState({user})
 	}
 
-		/**
-	 * Reverifies user with socket and then resets user.
-	 */
-	reconnect = (socket) => {
-		socket.emit(VERIFY_USER, this.state.user.name, ({ isUser, user })=>{
-			if(isUser){
-				this.setState({ user:null })
-			}else{
-				this.setUser(user)
-			}
-		})
-	}
+
 
 	/*
 	*	Sets the user property in state to null.
