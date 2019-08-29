@@ -19,6 +19,7 @@ import CardFooter from "components/Card/CardFooter.jsx";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
 
 import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
+import './index.css'
 
 
 import image from "assets/img/bg7.jpg";

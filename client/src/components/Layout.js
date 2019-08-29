@@ -38,7 +38,7 @@ export default class Layout extends React.Component {
 		
 		this.setState({socket})
 	}
-			/**
+	/**
 	 * Reverifies user with socket and then resets user.
 	 */
 	reconnect = (socket) => {
