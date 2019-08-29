@@ -21,7 +21,7 @@ const io = module.exports.io = require('socket.io')(server)
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('../client/build')); // serve the static react app
-
+  io.on('connection', SocketManager)
   app.use(cors());
   app.use(bodyparser.json());
   //app.use(security.verifyToken);
@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === 'production') {
   console.log('Serving React App...');
 };
 
-io.on('connection', SocketManager)
+
 server.listen(PORT, function () {
   console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
 });
