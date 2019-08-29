@@ -4,7 +4,7 @@ import { VERIFY_USER } from '../Events'
 export default class LoginForm extends Component {
 	constructor(props) {
 	  super(props);
-	
+
 	  this.state = {
 	  	nickname:"",
 	  	error:""
@@ -59,4 +59,4 @@ export default class LoginForm extends Component {
 			</div>
 		);
 	}
-}
+} 
