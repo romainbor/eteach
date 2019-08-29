@@ -23,35 +23,16 @@ export default class Layout extends React.Component {
 	/*
 	*	Connect to and initializes the socket.
 	*/
-
-
 	initSocket = ()=>{
 		const socket = io(socketUrl)
 
 		socket.on('connect', ()=>{
-			if(this.state.user){
-				this.reconnect(socket)
-			}else{
-				console.log("chat connected")
-			}
+			console.log("chat Connected");
 		})
 		
 		this.setState({socket})
 	}
-	/**
-	 * Reverifies user with socket and then resets user.
-	 */
-	reconnect = (socket) => {
-		socket.emit(VERIFY_USER, this.state.user.name, ({ isUser, user })=>{
-			if(isUser){
-				this.setState({ user:null })
-			}else{
-				this.setUser(user)
-			}
-		})
-	}
-		
-	
+
 	/*
 	* 	Sets the user property in state 
 	*	@param user {id:number, name:string}
@@ -61,8 +42,6 @@ export default class Layout extends React.Component {
 		socket.emit(USER_CONNECTED, user);
 		this.setState({user})
 	}
-
-
 
 	/*
 	*	Sets the user property in state to null.
