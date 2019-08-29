@@ -14,15 +14,13 @@ const PORT = process.env.PORT || 5000;
 
 
 const app = express();
-
-
 const cors = require('cors');
-
-
-const chat = require('https').createServer(app)
-const io = module.exports.io = require('socket.io').listen(chat)
-
 const SocketManager = require('./SocketManager')
+
+const server = require('https').Server(app)
+const io = module.exports.io = require('socket.io')(server)
+
+
 
 io.on('connection', SocketManager)
 
