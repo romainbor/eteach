@@ -2,16 +2,16 @@ const io = require('./index.js').io
 
 const { VERIFY_USER, USER_CONNECTED, USER_DISCONNECTED, 
 		LOGOUT, COMMUNITY_CHAT, MESSAGE_RECIEVED, MESSAGE_SENT,
-		TYPING, PRIVATE_MESSAGE, NEW_CHAT_USER  } = require('../client/src/Events')
+		TYPING, PRIVATE_MESSAGE, NEW_CHAT_USER  } = require('../Events')
 
-const { createUser, createMessage, createChat } = require('../client/src/Factories')
+const { createUser, createMessage, createChat } = require('../Factories')
 
 let connectedUsers = { }
 
 let communityChat = createChat({ isCommunity:true })
 
 module.exports = function(socket){
-
+					
 	// console.log('\x1bc'); //clears console
 	console.log("Socket Id:" + socket.id);
 
