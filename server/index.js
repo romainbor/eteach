@@ -24,13 +24,14 @@ var io = module.exports.io = require('socket.io').listen(chat)
 
 const SocketManager = require('./SocketManager')
 
-io.on('connection', SocketManager)
+
 
 
 
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('../client/build')); // serve the static react app
+  io.on('connection', SocketManager)
   app.use(cors());
   app.use(bodyparser.json());
   //app.use(security.verifyToken);
