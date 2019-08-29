@@ -17,7 +17,7 @@ const app = express();
 const cors = require('cors');
 const SocketManager = require('./SocketManager')
 
-const server = require('https').Server(app)
+const server = require('http').Server(app)
 const io = module.exports.io = require('socket.io')(server)
 
 
