@@ -14,10 +14,12 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 const cors = require('cors');
-const SocketManager = require('./SocketManager')
+
 
 const server = require('https').Server(app)
 const io = module.exports.io = require('socket.io')(server)
+
+const SocketManager = require('./SocketManager')
 
 console.log("tutu" + io);
 if (process.env.NODE_ENV === 'production') {
@@ -42,4 +44,3 @@ io.on('connection', SocketManager)
 server.listen(PORT, function () {
   console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
 });
-
